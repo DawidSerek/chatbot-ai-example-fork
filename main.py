@@ -1,15 +1,15 @@
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains import ConversationalRetrievalChain
-from langchain.document_loaders import DirectoryLoader
-from langchain.chat_models import ChatOpenAI
+from langchain_community.document_loaders import DirectoryLoader
+from langchain_community.chat_models import ChatOpenAI
 import gradio as gr
 import constants
 import os
 
 # Set OpenAI API Key to environment variable
-os.environ["OPENAI_API_KEY"] = constants.APIKEY
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 #Initialize LLM
 llm = ChatOpenAI(temperature=0.6, model_name="gpt-3.5-turbo")

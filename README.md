@@ -47,11 +47,11 @@ pip install -r requirements.txt
 ```
 
 ### Configure API Key
-Open the constants.py file in your preferred editor and replace APIKEY value with your OpenAI API key.
+Set up OpenAI API key in your profile by following the instructions here: https://platform.openai.com/docs/quickstart/step-2-set-up-your-api-key
 
 ### Running the example
 
-#### Remember to put your data into "data" folder before running!
+#### Remember to put your data into "data/pdf" folder before running!
 Simply run the main.py:
 
 ```bash
