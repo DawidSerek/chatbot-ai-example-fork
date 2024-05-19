@@ -61,5 +61,5 @@ chat = gr.ChatInterface(
     undo_btn=None
 )
 
-# Launch the app. Set share to True if you want to share your app publicly
+# Launch the app. Set share to True if you want to share your app publicly   (git test)
 chat.launch(share=False)
