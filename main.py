@@ -1,12 +1,14 @@
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains import ConversationalRetrievalChain
 from langchain_community.document_loaders import DirectoryLoader
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAI
 import gradio as gr
 import constants
 import os
+
+
 
 # Set OpenAI API Key to environment variable
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
@@ -30,6 +32,7 @@ text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 documents = text_splitter.split_documents(documents)
 
 print("Split into " + str(len(documents)) + " chunks")
+
 
 #Initialize OpenAI Embeddings. OpenAI’s text embeddings measure the relatedness of text strings.
 #An embedding is a vector (list) of floating point numbers. The distance between two vectors measures their relatedness. Small distances suggest high relatedness and large distances suggest low relatedness.
