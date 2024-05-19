@@ -5,9 +5,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_openai import ChatOpenAI, OpenAI
 import gradio as gr
-import constants
 import os
-
 
 
 # Set OpenAI API Key to environment variable
